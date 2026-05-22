@@ -15,9 +15,20 @@ int main() {
     for (int i = 0; i < times; i++) {
         cout << "Loop "+ to_string(i+1) << endl; //Shows loop number
         cout << "Input String 1:"; //Prompt for string input
-        getline(cin, str1); //getline used to allow for spaces in the string input
+        
+        //getline used to allow for spaces in the string input
+        if(!getline(cin, str1)) {break;}
+        if (str1.empty()) {
+            cout << "Error: Empty value" << endl;
+            continue;
+        } 
+
         cout << "Input String 2:"; //Prompt for string input
-        getline(cin, str2);
+        if(!getline(cin, str2)) {break;}
+        if (str2.empty()){
+            cout <<" Error: Empty value" << endl;
+            continue;
+        }
         string str3 = str1 + " " + str2; //Concatenates the two strings with a space in between
         cout << str3 << endl; //Prints the concatenated string to the screen
 
