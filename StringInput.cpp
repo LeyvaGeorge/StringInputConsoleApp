@@ -13,13 +13,13 @@ int main() {
     int times = 3; //Qty to loop the application
     string str1,str2;
     for (int i = 0; i < times; i++) {
-        cout << "Loop "+ to_string(i+1) << endl;
-        cout << "Input String 1:";
-        cin >> str1;
-        cout << "Input String 2:";
-        cin >> str2;
-        string both = str1 + " " + str2;
-        cout << both << endl;
+        cout << "Loop "+ to_string(i+1) << endl; //Shows loop number
+        cout << "Input String 1:"; //Prompt for string input
+        getline(cin, str1); //getline used to allow for spaces in the string input
+        cout << "Input String 2:"; //Prompt for string input
+        getline(cin, str2);
+        string str3 = str1 + " " + str2; //Concatenates the two strings with a space in between
+        cout << str3 << endl; //Prints the concatenated string to the screen
 
     }
 }
