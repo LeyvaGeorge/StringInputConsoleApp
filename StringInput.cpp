@@ -10,11 +10,16 @@
 using namespace std;
 
 int main() {
-    string one,two;
-    cout << "Input one:";
-    cin >> one;
-    cout << "Input two:";
-    cin >> two;
-    string both = one + " " + two;
-    cout << both;
+    int times = 3; //Qty to loop the application
+    string str1,str2;
+    for (int i = 0; i < times; i++) {
+        cout << "Loop "+ to_string(i+1) << endl;
+        cout << "Input String 1:";
+        cin >> str1;
+        cout << "Input String 2:";
+        cin >> str2;
+        string both = str1 + " " + str2;
+        cout << both << endl;
+
+    }
 }
